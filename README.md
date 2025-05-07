@@ -1,82 +1,70 @@
-# Sistema de Votação para Representantes de Turma e Projetos Acadêmicos
+# 📊 Dash e Reports – Sistema de Votação (Front-End)
 
-Este repositório contém o desenvolvimento do Front-End do Sistema de Votação para Representantes de Turma e Projetos Acadêmicos da Fatec-SP. O sistema visa facilitar o processo de votação tanto para os alunos da unidade quanto para os visitantes, com funcionalidades específicas para cada perfil de usuário.
+Este repositório contém o desenvolvimento do **Front-End** do **Sistema de Votação para Representantes de Turma e Projetos Acadêmicos** da Fatec-SP.  
+A interface é focada em **visualização de resultados em tempo real**, com ênfase em **auditabilidade, acessibilidade** e **interpretação visual dos dados**.
 
+---
 
+## 🧩 Arquitetura
 
-## Estrutura do Sistema
+O front-end se comunica com o back-end por meio de uma **API REST**, utilizando **Axios** para requisições HTTP e **SSE (Server-Sent Events)** para atualização em tempo real dos dados de votação.
 
-O sistema será dividido em dois perfis principais:
-
-1. Administrador
-A visão do administrador será voltada para dashboards interativos e estatísticas detalhadas sobre o andamento da votação. O administrador terá a capacidade de gerenciar as votações, acompanhar resultados em tempo real e gerar relatórios.
-
-2. Usuário
-Os usuários são divididos em duas categorias, com funcionalidades específicas:
-
-- Aluno da Unidade: O aluno da Fatec-SP terá a função de votar para escolher os representantes de turma. Ele terá acesso a uma interface de votação simples e objetiva.
-
-- Visitante: O usuário visitante terá a função de votar nos melhores projetos apresentados nas feiras de projetos promovidas pela unidade. A votação será realizada de maneira intuitiva, permitindo ao visitante escolher os projetos que considera mais inovadores e interessantes.
+![image](https://github.com/user-attachments/assets/1d1994e3-193d-452f-9370-e42d401caa03)
 
 
-## Fluxo de Navegação
+---
 
-### Administrador
-1. O administrador acessa o Dashboard do sistema.
+## ⚙️ Componentes e Tecnologias
 
-2. O administrador escolhe entre Votação Interna ou Votação Externa.
+O projeto utiliza as seguintes tecnologias principais:
 
-3. Dentro de cada seção, o administrador pode:
+- **Next.js**: Framework baseado em React para criação da interface com renderização híbrida e rotas otimizadas.
+- **React.js**: Biblioteca base para construção da UI antes da refatoração para Next.
+- **Axios**: Utilizado para comunicação com a API do back-end.
+- **CORS**: Gerenciado para permitir a integração entre front-end e back-end hospedados em ambientes diferentes.
 
-- Visualizar cards com estatísticas resumidas de cada votação.
+---
 
-- Ao clicar em um card, o administrador acessa a tela detalhada, com gráficos e rankings dos candidatos ou projetos.
+## 🖼️ Exemplo Visual
 
-4. O administrador pode acessar o Histórico de Votações para consultar os registros de votos realizados, incluindo detalhes sobre quem votou e em quem.
+![Image](https://github.com/user-attachments/assets/c87c7359-fca6-486b-9b3b-92e6dbd3c30d)
 
-### Usuário (Aluno ou Visitante)
+---
 
-1. O usuário faz o login no sistema.
+## 🧪 Tecnologias Utilizadas
 
-2. Se o usuário for aluno, ele escolhe entre Votação Interna ou Votação Externa:
+- **Next.js**
+- **React.js**
+- **JavaScript (ES6+)**
+- **HTML5**
+- **CSS3**
+- **Axios**
+- **CORS**
 
-3. Caso escolha Votação Interna, o aluno visualiza os candidatos de sua sala e realiza seu voto.
+---
 
-4. Caso escolha Votação Externa, o aluno visualiza os projetos e pode votar neles, ou optar por não votar.
+## ✅ Pré-requisitos
 
-5. Se o usuário for visitante, ele é redirecionado diretamente para a Votação Externa, onde pode visualizar os projetos e votar neles.
+Para rodar o projeto localmente, você precisará ter instalado:
 
+- [Node.js](https://nodejs.org/) (versão recomendada: LTS)
+- npm (gerenciador de pacotes padrão do Node.js)
 
-## Tecnologias Utilizadas Para o Front-End
+---
 
-- React: Para o desenvolvimento da interface de usuário.
+## 🚀 Instalação e Execução
 
-- HTML5 e CSS3: Para a estruturação e estilização do layout.
+Siga os passos abaixo para rodar o projeto localmente:
 
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
 
-## Para Iniciar o Projeto
+# Acesse o diretório do projeto
+cd dash-fe
 
-No diretório do projeto, você pode rodar:
+# Instale as dependências
+npm install
 
-### `npm start`
-
-Roda o app no modo de desenvolvimento.\
-Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no seu navegador.
-
-A página será recarregada sempre que você fizer alterações.\
-Você também poderá ver quaisquer erros de lint no console.
-
-### `npm test`
-
-Lança o runner de testes no modo interativo de observação.\
-Veja a seção sobre [running tests](https://facebook.github.io/create-react-app/docs/running-tests) para mais informações.
-
-### `npm run build`
-
-Cria o app para produção na pasta `build`.\
-Ele empacota o React corretamente no modo de produção e otimiza a construção para melhor desempenho.
-
-A construção é minificada e os nomes dos arquivos incluem os hashes.\
-Seu app está pronto para ser implantado!
-Veja a seção sobre [deployment](https://facebook.github.io/create-react-app/docs/deployment) para mais informações.
-
+# Execute o projeto em ambiente de desenvolvimento
+npm run dev
